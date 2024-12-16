@@ -1,0 +1,281 @@
+{
+  "info": {
+    "_postman_id": "2125cf81-e737-4e09-987c-d4020c0e5da2",
+    "name": "Weather",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "366192"
+  },
+  "item": [
+    {
+      "name": "createMetric",
+      "item": [
+        {
+          "name": "saveMetric",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"sensorId\": \"sensor1\",\n    \"metricType\": \"TEMPERATURE\",\n    \"metricValue\": 300\n}\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/metrics",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "metrics"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "queryMetric",
+      "item": [
+        {
+          "name": "1 sensor",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"sensorIds\": [\"sensor1\"],\n    \"metricTypes\": [\"TEMPERATURE\"],\n    \"statisticType\": \"AVERAGE\",\n    \"startDate\": \"2024-12-01T00:00:00\",\n    \"endDate\": \"2024-12-31T23:59:59\"\n}\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/metrics",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "metrics"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "1 sensor no date",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"sensorIds\": [\"sensor1\"],\n    \"metricTypes\": [\"TEMPERATURE\"],\n    \"statisticType\": \"MAX\"\n}\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/metrics",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "metrics"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "2 sensors",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"sensorIds\": [\"sensor1\", \"sensor2\"],\n    \"metricTypes\": [\"TEMPERATURE\"],\n    \"statisticType\": \"MAX\",\n    \"startDate\": \"2024-12-01T00:00:00\",\n    \"endDate\": \"2024-12-31T23:59:59\"\n}\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/metrics",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "metrics"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "1 sensors 2 metrics",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"sensorIds\": [\"sensor1\"],\n    \"metricTypes\": [\"TEMPERATURE\", \"HUMIDITY\"],\n    \"statisticType\": \"MAX\",\n    \"startDate\": \"2024-12-01T00:00:00\",\n    \"endDate\": \"2024-12-31T23:59:59\"\n}\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/metrics",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "metrics"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "2 sensors 2 metrics",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"sensorIds\": [\"sensor1\"],\n    \"metricTypes\": [\"TEMPERATURE\", \"HUMIDITY\"],\n    \"statisticType\": \"MAX\",\n    \"startDate\": \"2024-12-01T00:00:00\",\n    \"endDate\": \"2024-12-31T23:59:59\"\n}\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/metrics",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "metrics"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "2 sensors 3 metrics",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"sensorIds\": [\"sensor1\"],\n    \"metricTypes\": [\"TEMPERATURE\", \"HUMIDITY\", \"WIND_SPEED\"],\n    \"statisticType\": \"MAX\",\n    \"startDate\": \"2024-12-01T00:00:00\",\n    \"endDate\": \"2024-12-31T23:59:59\"\n}\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/metrics",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "metrics"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "all sensors all metrics",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"statisticType\": \"MAX\",\n    \"startDate\": \"2024-12-01T00:00:00\",\n    \"endDate\": \"2024-12-31T23:59:59\"\n}\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/metrics",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "metrics"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
