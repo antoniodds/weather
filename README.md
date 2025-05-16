@@ -1,4 +1,4 @@
-# Weather Sensor API
+  # Weather Sensor API
 
 A Spring Boot REST API for processing and querying weather sensor data.
 
